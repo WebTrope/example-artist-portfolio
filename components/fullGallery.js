@@ -90,7 +90,7 @@ function ImageContainer(props) {
     });
 
     gsap
-      .to(".heading", {
+      .to(".desc", {
         x: 100,
         opacity: 0,
         duration: 0.5,
@@ -98,7 +98,7 @@ function ImageContainer(props) {
       })
       .delay(0.3);
     gsap
-      .to(".desc", {
+      .to(".heading", {
         x: 100,
         opacity: 0,
         duration: 0.5,
