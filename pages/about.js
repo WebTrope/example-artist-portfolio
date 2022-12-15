@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Footer from "../components/footer";
-import Header from "../components/Header";
+import Header from "../components/header";
 import { useEffect } from "react";
 import gsap from "gsap";
 
