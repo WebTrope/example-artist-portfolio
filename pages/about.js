@@ -6,16 +6,18 @@ import gsap from "gsap";
 
 function About() {
   useEffect(() => {
-    gsap.fromTo(
-      ".heading",
-      { x: -100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
-    );
+    gsap
+      .fromTo(
+        ".heading",
+        { y: -100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
+      )
+      .delay(0.5);
     gsap
       .fromTo(
         ".text",
-        { x: -100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
       )
       .delay(0.5);
   }, []);

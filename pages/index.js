@@ -7,15 +7,17 @@ import gsap from "gsap";
 
 function App() {
   useEffect(() => {
-    gsap.fromTo(
-      ".heading",
-      { y: -100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
-    );
+    gsap
+      .fromTo(
+        ".heading",
+        { y: -100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
+      )
+      .delay(0.5);
     gsap
       .fromTo(
         ".text",
-        { y: -100, opacity: 0 },
+        { y: 100, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
       )
       .delay(0.5);

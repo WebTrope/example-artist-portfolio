@@ -7,20 +7,20 @@ function Header() {
   useEffect(() => {
     gsap.fromTo(
       ".nav-icons",
-      { x: -100, opacity: 0 },
+      { x: 100, opacity: 0 },
       { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
     );
     gsap
       .fromTo(
         ".nav-four",
-        { x: -100, opacity: 0 },
+        { x: 100, opacity: 0 },
         { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
       )
       .delay(0.5);
     gsap
       .fromTo(
         ".nav-three",
-        { x: -100, opacity: 0 },
+        { x: 100, opacity: 0 },
         { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
       )
       .delay(0.7);
@@ -30,21 +30,19 @@ function Header() {
         { x: -100, opacity: 0 },
         { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
       )
-      .delay(0.9);
+      .delay(0.7);
     gsap
       .fromTo(
         ".nav-one",
         { x: -100, opacity: 0 },
         { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
       )
-      .delay(1.1);
-    gsap
-      .fromTo(
-        ".nav-brand",
-        { x: -100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
-      )
-      .delay(1.3);
+      .delay(0.5);
+    gsap.fromTo(
+      ".nav-brand",
+      { x: -100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
+    );
   });
 
   return (

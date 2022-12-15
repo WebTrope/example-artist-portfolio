@@ -6,6 +6,9 @@ import { useEffect, useState } from "react";
 function FullGallery() {
   return (
     <>
+      <h1 className='text-8xl font-heading font-bold text-center text-main-dark dark:text-indigo-200'>
+        Gallery
+      </h1>
       <div className='flex flex-row items-center justify-around p-10 bg-main-light dark:bg-transparent dark:bg-none flex-wrap gap-3'>
         <ImageContainer
           src='https://source.unsplash.com/random/500x1000/?coffee'
