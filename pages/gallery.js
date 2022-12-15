@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -34,4 +35,5 @@ function Gallery() {
     </>
   );
 }
+
 export default Gallery;
