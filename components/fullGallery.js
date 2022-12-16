@@ -1,4 +1,3 @@
-import { Button } from "flowbite-react";
 import gsap from "gsap";
 import { useEffect, useState } from "react";
 
@@ -129,7 +128,10 @@ function ImageContainer(props) {
         '
         >
           <div className='relative flex gap-6 justify-around dark:bg-none dark:bg-transparent '>
-            <div className='absolute top-6 right-6 m-4'>
+            <div
+              className='absolute top-6 right-6 m-4 z-50
+            '
+            >
               <button onClick={close}>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -173,9 +175,16 @@ function ImageContainer(props) {
       <img
         src={src}
         alt={alt}
-        className='scale-95 hover:scale-100 hover:drop-shadow-lg transform transition duration-500 ease-in-out'
+        className='scale-100 hover:scale-110 hover:drop-shadow-lg my-10 transform transition duration-500 ease-in-out'
         onClick={() => {
-          setIsOpen(true);
+          // if the viewport is a mobile device, open the image in a new tab
+          if (window.innerWidth < 768) {
+            window.open(src, "_blank");
+          }
+          // if the viewport is a desktop, open the image in a modal
+          else {
+            setIsOpen(true);
+          }
         }}
       />
     </>
